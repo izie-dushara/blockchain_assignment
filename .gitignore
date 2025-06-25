@@ -1,0 +1,17 @@
+# Node
+**/node_modules/
+**/dist/
+**/.env
+
+# Flutter
+**/build/
+**/.dart_tool/
+**/.packages
+**/pubspec.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
