@@ -1,11 +1,12 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Kysely } from 'kysely';
+import { DATABASE_CONNECTION } from 'src/database/database.module';
 import { Database } from 'src/database/types';
 
 @Injectable()
 export class UsersService {
   constructor(
-    @Inject('DATABASE_CONNECTION') private readonly db: Kysely<Database>,
+    @Inject(DATABASE_CONNECTION) private readonly db: Kysely<Database>,
   ) {}
 
   async findAll() {

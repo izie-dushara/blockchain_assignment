@@ -1,7 +1,8 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
-// TODO: Set config for environment variables
+// TODO: Define resources
+// TODO: Create multi-signature wallet contract
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
