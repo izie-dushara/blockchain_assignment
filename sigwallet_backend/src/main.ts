@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
-// TODO: Set Kysely
+// TODO: Set config for environment variables
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);

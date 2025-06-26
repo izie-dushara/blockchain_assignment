@@ -6,11 +6,11 @@ export default defineConfig({
   // replace me with a real dialect instance OR a dialect name + `dialectConfig` prop.
   dialect: new PostgresDialect({
     pool: new Pool({
-      host: 'localhost',
-      port: 5432,
-      user: 'postgres',
-      password: '12345678',
-      database: 'blockchain_assignment',
+      host: process.env.DB_HOST,
+      port: Number.parseInt(process.env.DB_PORT!),
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_DATABASE,
     }),
   }),
   migrations: {

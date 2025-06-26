@@ -1,0 +1,83 @@
+### Variables
+@baseUrl = http://localhost:3000/apitest
+@contentType = application/json
+
+### Get all users
+GET {{baseUrl}}/users
+Accept: {{contentType}}
+
+###
+
+### Get user by ID
+GET {{baseUrl}}/users/1
+Accept: {{contentType}}
+
+###
+
+### Create a new user
+POST {{baseUrl}}/users
+Content-Type: {{contentType}}
+
+{
+  "email": "jane.doe@example.com",
+  "name": "Jane Doe"
+}
+
+###
+
+### Create another user for testing
+POST {{baseUrl}}/users
+Content-Type: {{contentType}}
+
+{
+  "email": "jane.smith@example.com",
+  "name": "Jane Smith"
+}
+
+###
+
+### Update user (partial update)
+PUT {{baseUrl}}/users/1
+Content-Type: {{contentType}}
+
+{
+  "name": "John Updated"
+}
+
+###
+
+### Update user email only
+PUT {{baseUrl}}/users/1
+Content-Type: {{contentType}}
+
+{
+  "email": "john.updated@example.com"
+}
+
+###
+
+### Update user with both fields
+PUT {{baseUrl}}/users/1
+Content-Type: {{contentType}}
+
+{
+  "email": "john.final@example.com",
+  "name": "John Final"
+}
+
+###
+
+### Delete user
+DELETE {{baseUrl}}/users/1
+
+###
+
+### Verify deletion - should return 404 or empty
+GET {{baseUrl}}/users/1
+Accept: {{contentType}}
+
+###
+
+### Get all users after operations
+GET {{baseUrl}}/users
+Accept: {{contentType}}
