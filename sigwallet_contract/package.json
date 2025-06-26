@@ -1,0 +1,19 @@
+{
+    "name": "sigwallet_contract",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "node": "npx hardhat node",
+        "deploy": "npx hardhat ignition deploy ./ignition/modules/Lock.ts --reset --network localhost",
+        "test": "npx hardhat test",
+        "compile": "npx hardhat compile"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^6.0.0",
+        "hardhat": "^2.25.0"
+    }
+}

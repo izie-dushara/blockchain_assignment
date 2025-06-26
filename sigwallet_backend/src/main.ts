@@ -1,7 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
-// TODO: Set Hardhat
 // TODO: Set Kysely
 
 async function bootstrap() {
