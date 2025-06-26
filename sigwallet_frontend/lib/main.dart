@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
+import 'package:logging/logging.dart';
 
 // TODO: Separate to api services
-// TODO: Setup dotenv, Flutter Bloc, Google ML Kit Detection, tflite Flutter
+// TODO: Setup condition
+void main() async {
+  try {
+    await dotenv.load(fileName: '.env');
+  } catch (e) {
+    debugPrint("Failed to initialize .env: $e");
+  }
 
-void main() {
-  runApp(const MyApp());
+  Logger.root.level = Level.ALL;
+  Logger.root.onRecord.listen((record) {
+    debugPrint(
+      '${record.loggerName}: ${record.level.name}: ${record.time}: ${record.message}',
+    );
+  });
 }
 
 class MyApp extends StatelessWidget {
