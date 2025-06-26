@@ -17,7 +17,18 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "migrate": "npx kysely migrate",
+    "seed": "npx kysely seed",
+    "sql": "npx kysely sql",
+    "migrate:make": "npx kysely migrate:make",
+    "migrate:down": "npx kysely migrate:down",
+    "migrate:latest": "npx kysely migrate:latest",
+    "migrate:list": "npx kysely migrate:list",
+    "migrate:rollback": "npx kysely migrate:rollback",
+    "migrate:up": "npx kysely migrate:up",
+    "seed:make": "npx kysely seed:make",
+    "seed:run": "npx kysely seed:run"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
