@@ -1,0 +1,18 @@
+### Variables
+@baseUrl = http://localhost:3000/apitest
+@contentType = application/json
+@safeAddress = B70657d13037Ee212DB3Bba82047784e1908CF35
+
+### Check is Address is deployed
+GET {{baseUrl}}/safe-wallet/0x{{safeAddress}}/is-deployed
+Accept: {{contentType}}
+
+### Get Safe Wallet
+GET {{baseUrl}}/safe-wallet/0x{{safeAddress}}
+Accept: {{contentType}}
+###
+
+### Get balance
+GET {{baseUrl}}/safe-wallet/0x{{safeAddress}}/balance
+Accept: {{contentType}}
+
